@@ -14,6 +14,7 @@ namespace Journal
             "If I had one thing I could do over today, what would it be?"
         };
 
+        // Return a random prompt from the list
         public string GetRandomPrompt()
         {
             Random random = new Random();

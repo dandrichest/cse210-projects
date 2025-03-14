@@ -58,13 +58,10 @@ namespace Journal
                     default:
                         Console.WriteLine("Invalid option. Please select a valid option.");
                         break;
-
-                        // Exceeding requirements
-                        // A predefined list of motivational quotes is added to the Journal class.
-                        // When saving each entry to the file, a random quote from the list is selected and appended.
-
                 }
             }
         }
     }
 }
+
+

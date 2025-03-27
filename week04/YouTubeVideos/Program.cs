@@ -17,8 +17,8 @@ class Program
         video1.AddComment(new Comment("Charlie", "Could you cover advanced topics next time?"));
         videos.Add(video1);
 
-        Video video2 = new Video("Exploring LINQ", "Deborah", 750);
-        video2.AddComment(new Comment("Alice", "LINQ seems so useful, thanks for explaining!"));
+        Video video2 = new Video("Exploring Python", "Deborah", 750);
+        video2.AddComment(new Comment("Alice", "Python tutorial is so useful, thanks for explaining!"));
         video2.AddComment(new Comment("Emma", "Wonderful examples, keep it up!"));
         video2.AddComment(new Comment("Sophia", "Love the way you break down concepts."));
         videos.Add(video2);

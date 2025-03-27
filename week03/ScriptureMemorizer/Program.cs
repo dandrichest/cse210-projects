@@ -10,27 +10,35 @@ class Program
         // Create a Scripture using the Reference and a text
         Scripture scripture = new Scripture(reference, "For God so loved the world that He gave His only begotten Son");
 
-        // Display the Scripture
-        Console.WriteLine("Original Scripture:");
-        Console.WriteLine(scripture.GetDisplayText());
-        Console.WriteLine();
-
-        // Hide random words
-        scripture.HideRandomWords(5);
-
-        // Display Scripture with some words hidden
-        Console.WriteLine("Scripture with Hidden Words:");
-        Console.WriteLine(scripture.GetDisplayText());
-        Console.WriteLine();
-
-        // Check if all words are hidden
-        if (scripture.IsCompletelyHidden())
+        while (true)
         {
-            Console.WriteLine("All words are hidden!");
-        }
-        else
-        {
-            Console.WriteLine("Some words are still visible.");
+            Console.Clear(); // Clear the console screen
+            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine();
+            Console.Write("Press ENTER to hide random words, or type 'quit' to exit: ");
+            string input = Console.ReadLine();
+
+            if (input?.ToLower() == "quit")
+            {
+                Console.WriteLine("Goodbye!");
+                break; // Exit the program
+            }
+            else
+            {
+                // Hide a few random words
+                scripture.HideRandomWords(3);
+
+                // Check if all words are hidden
+                if (scripture.IsCompletelyHidden())
+                {
+                    Console.Clear();
+                    Console.WriteLine(scripture.GetDisplayText());
+                    Console.WriteLine("\nAll words are hidden! Goodbye!");
+                    break; // Exit the program
+                }
+            }
         }
     }
 }
+
+// When selecting the random words to hide the program randomly select from only those words that are not already hidden.
